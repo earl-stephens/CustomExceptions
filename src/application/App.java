@@ -1,4 +1,5 @@
 package application;
+import application.exceptions.TemperatureOutOfRangeException;
 
 public class App {
 	
@@ -7,7 +8,7 @@ public class App {
 		
 		try {
 			stat.setTemperature(-20);
-		} catch (Exception e) {
+		} catch (TemperatureOutOfRangeException e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
 		}
